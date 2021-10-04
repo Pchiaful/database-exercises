@@ -10,7 +10,7 @@ WHERE name = 'Sgt. Pepper''s Lonely Hearts Club Band';
 SELECT genre AS'This is the genre of \'Neverminid\'.'  FROM albums
 WHERE name = 'Nevermind';
 
-SELECT name AS 'These albums were released in the \'90s.' FROM albums
+SELECT name, release_date AS 'These albums were released in the \'90s.' FROM albums
 WHERE release_date BETWEEN 1990 AND 1999;
 
 SELECT name AS 'These are the albums with sales under $20 million.' FROM albums
