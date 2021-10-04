@@ -1,6 +1,8 @@
-Use codeup_test_db;
+USE codeup_test_db;
 
 DROP TABLE IF EXISTS albums;
+
+show tables;
 
 CREATE TABLE IF NOT EXISTS albums (
     id INT UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -11,3 +13,8 @@ CREATE TABLE IF NOT EXISTS albums (
     genre VARCHAR(128) NOT NULL,
     PRIMARY KEY (id)
 );
+
+SELECT id, name, artist FROM albums;
+
+SELECT id, name, artist FROM albums
+WHERE id = 3;
