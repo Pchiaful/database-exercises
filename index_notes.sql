@@ -7,6 +7,14 @@ SELECT * FROM albums;
 INSERT INTO albums (artist, name, release_date, genre, sales)
 VALUES ('Michael Jackson', 'Thriller', 1982,'Pop, post-disco, funk, rock', 48.9);
 
+CREATE TABLE persons (
+                         id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+                         first_name VARCHAR(25) NOT NULL,
+                         album_id INT UNSIGNED NOT NULL,
+                         PRIMARY KEY (id),
+                         FOREIGN KEY (album_id) REFERENCES albums (id)
+);
+
 CREATE TABLE different_quotes (
         id INT NOT NULL AUTO_INCREMENT,
         content VARCHAR(240) NOT NULL,
