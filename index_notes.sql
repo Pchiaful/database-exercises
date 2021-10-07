@@ -44,3 +44,9 @@ DESCRIBE employees;
 DESCRIBE salaries;
 
 DESCRIBE titles;
+
+
+SELECT COUNT(emp_no) FROM salaries;
+SELECT COUNT(emp_no) FROM employees;
+
+SELECT employees.emp_no, CONCAT(first_name, ' ', last_name) AS 'FULL NAME', salary FROM employees JOIN salaries ON employees.emp_no = salaries.emp_no;
