@@ -44,3 +44,11 @@ INSERT INTO users (name, email, role_id) VALUES
                                              ('trey', 'trey@example.com', 2),
                                              ('curt', 'curt@example.com', 2),
                                              ('ally', 'ally@example.com', null);
+
+USE codeup_test_db;
+
+INSERT INTO persons (first_name, album_id) VALUES ('Olivia', 29), ('Santiago', 27), ('Tareq', 15), ('Anaya', 28);
+
+SELECT * FROM persons;
+
+SELECT first_name, name AS 'fav album' FROM persons JOIN albums ON persons.album_id = albums.id;
