@@ -1,14 +1,14 @@
-const question = document.querySelectorAll(".question");
+const question = document.getElementsByClassName('question-section');
 
-question.forEach(question => {
-    question.addEventListener("click", event => {
-        question.classList.toggle("active");
-        const answerHidden = question.querySelectorAll(".answer");
-        if(question.classList.contains("active")) {
-            answerHidden.style.maxHeight = question.scrollHeight + "px";
-        }
-        else {
-            answerHidden.style.maxHeight = 0;
+for (let i = 0; i < question.length; i++) {
+    question[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+
+        const answer = this.nextElementSibling;
+        if (answer.style.display === "block") {
+            answer.style.display = "none";
+        } else {
+            answer.style.display = "block";
         }
     });
-});
+};
